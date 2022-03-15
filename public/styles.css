@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@0,300;1,300&family=Press+Start+2P&display=swap');
+
+.mobile {
+    visibility: hidden;
+    height: 0;
+    display: none;
+}
+
+html, body{
+    margin:0;
+    padding: 0;
+    color: #fff;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 16pt;
+    overflow-x: hidden;
+}
+
+body{
+    background: url("/bg.webp");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+h1{
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    display: block;
+    text-shadow: #0a8888 -4px -4px, #560000 4px 4px;
+    font-size: 36pt;
+    text-transform: uppercase;
+    padding: 24px 0;
+}
+
+#thinking{
+    position: fixed;
+    top:0;
+    z-index: 10000;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0,0,0,0.8);
+    backdrop-filter: blur(5px);
+    box-sizing: border-box;
+}
+
+img{
+    display: block;
+    padding: 0;
+    max-width: 100%;
+}
+
+#thinking div{
+    margin: 196px auto;
+    padding: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+#thinking div img{
+    margin: 0 auto;
+}
+
+#thinking div div{
+    margin: 0;
+    padding-top: 36px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 18pt;
+    line-height: 48px;
+    font-variant-ligatures: none;
+}
+
+.flash{
+    animation: fadeIn 0.5s infinite alternate;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+}
+
+#home{
+    padding: 0 24px;
+}
+#content{
+    box-sizing: border-box;
+    margin: 36px auto 128px;
+    width: 95%;
+    max-width: 800px;
+    background: #000;
+    border: 2px solid white;
+    padding: 16px;
+    border-radius: 8px;
+}
+
+#flash-container{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 0 64px 64px 0;
+    box-sizing: border-box;
+}
+
+.flash-box{
+    color: #fff;
+    font-weight: bold;
+    background: #f60;
+    border: 2px solid #fff;
+    border-radius: 3px;
+    padding: 16px 12px;
+    min-width: 160px;
+    max-width: 280px;
+    text-align: center;
+    font-size: 14pt;
+    margin-bottom: 8px;
+}
+
+.btn{
+    box-sizing: border-box;
+    display: block;
+    outline: none;
+    width: 100%;
+    background: #0a8888;
+    font-family: 'Press Start 2P', cursive;
+    border-radius: 5px;
+    border: 0;
+    cursor: pointer;
+    color: #fff;
+    padding: 16px 8px;
+    transition: background-color 0.3s ease-in-out;
+    margin: 16px 0;
+    font-variant-ligatures: none;
+}
+
+.btn:hover{
+    background: #560000;
+}
+
+#summary-container{
+    width:100%;
+    position: fixed;
+    top: 5vh;
+    z-index: 10001;
+}
+
+#summary{
+    width: 90%;
+    max-width: 600px;
+    height: 580px;
+    background: #0a8888;
+    margin: 0 auto;
+    border-radius: 5px;
+    padding: 0 12px;
+}
+
+.closer{
+    width:100%;
+    font-weight: bold;
+    text-align: right;
+    font-size: 24pt;
+}
+
+.scroller{
+    max-height: 460px;
+    overflow-y: scroll;
+    margin: 18px 0;
+    background: #000;
+    box-sizing: border-box;
+    padding: 12px;
+    font-size: 12pt;
+}
+
+h2, h3{
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+h2{
+    width: 100%;
+    text-align: center;
+}
+
+#galax-container{
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 16px 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.one-galax{
+    width: 200px;
+    margin: 0 8px 16px;
+    cursor: pointer;
+    position: relative;
+}
+
+.glx-img{
+    width: 100%;
+    border-radius: 5px;
+}
+
+.filterbar{
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+}
+
+.filter{
+    margin: 8px;
+}
+
+select{
+    box-sizing: border-box;
+    outline: none;
+    background: #fff;
+    font-family: 'Open Sans Condensed', sans-serif;
+    border-radius: 5px;
+    border: 0;
+    color: #000;
+    font-size: 14pt;
+    text-align: center;
+}
+
+.input-box{
+    box-sizing: border-box;
+    background: #fff;
+    border-radius: 5px;
+    border: 0;
+    margin: 12px 6px 0;
+    padding: 0;
+    display: inline-block;
+    color: #000;
+}
+
+.end-btn{
+    box-sizing: border-box;
+    display: inline-block;
+    outline: none;
+    background: #0a8888;
+    font-family: 'Open Sans Condensed', sans-serif;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: 0;
+    cursor: pointer;
+    color: #fff;
+    padding: 8px;
+    margin: 0;
+    transition: background-color 0.3s ease-in-out;
+    height: 100%;
+    font-size: 12pt;
+    font-weight: bold;
+}
+
+.end-btn:hover{
+    background: #560000;
+}
+
+input{
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Open Sans Condensed', sans-serif;
+    background: #fff;
+    color: #000;
+    font-size: 12pt;
+    border: 0;
+    padding: 8px;
+}
+
+#profile-container{
+    width:100%;
+    position: fixed;
+    top: 5vh;
+    z-index: 10001;
+}
+
+#profile{
+    width: 90%;
+    max-width: 600px;
+    background: #0a8888;
+    margin: 0 auto;
+    border-radius: 5px;
+    padding: 0 24px 24px;
+}
+
+#profile h2{
+    margin-top: -12px;
+    padding-top: 0;
+}
+
+#profile div ul{
+    margin-top: 0;
+}
+
+.profile-box{
+    display: block;
+    font-size: 14pt;
+}
+
+.disabled{
+    background: #888 !important;
+    cursor: not-allowed !important;
+}
+
+.minestar{
+    position: absolute;
+    top:0;left:0;z-index: 999;
+    padding: 6px 0 0 6px;
+    display: block;
+    width: 30px;
+}
+
+.saleboard{
+    position: absolute;
+    top:0;right:0;z-index: 999;
+    padding: 0;
+    display: block;
+    width: 78px;
+}
+
+.button-bar{
+    display: flex;
+    padding: 12px  0 16px 0
+}
+
+.top-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    margin: 12px 12px 0 0;
+}
+
+.buy-btn{
+    color: #0a8888 !important;
+    background: #fff !important;
+}
+
+.sell-price-input{
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Open Sans Condensed', sans-serif;
+    background: #fff;
+    color: #000;
+    font-size: 12pt;
+    border: 0;
+    padding: 8px;
+    border-radius: 5px;
+    margin: 8px 0;
+    display: block;
+    text-align: center;
+    width: 100%;
+}
+.priceimg{
+    display: inline-block;
+    height: 1.1em;
+    padding: 0;
+    margin: 0;
+}
